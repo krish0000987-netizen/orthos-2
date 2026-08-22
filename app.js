@@ -1,6 +1,6 @@
 /* ==========================================================================
    ORTHOS @ KRSNAA DIAGNOSTICS - DR. DHARM BEDWAL LANDING PAGE
-   Interactive Web Application Logic
+   Interactive Web Application Logic (100% Mobile Optimized)
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -81,6 +81,8 @@ function initAppointmentModal() {
   const closeBtn = document.querySelector('.modal-close');
   const modalForm = document.getElementById('modalBookingForm');
   const modalSuccessMsg = document.getElementById('modalSuccessMsg');
+  const navMenu = document.getElementById('navMenu');
+  const navToggle = document.getElementById('navToggle');
 
   if (!modal) return;
 
@@ -88,6 +90,13 @@ function initAppointmentModal() {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       modal.classList.add('active');
+      // Close mobile menu if open
+      if (navMenu && navMenu.classList.contains('active')) {
+        navMenu.classList.remove('active');
+        if (navToggle) {
+          navToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+        }
+      }
     });
   });
 
@@ -176,26 +185,33 @@ function initQuickBookingForm() {
 
 /* 5. Mobile Navigation Drawer */
 function initMobileNav() {
-  const navToggle = document.querySelector('.nav-toggle');
-  const navMenu = document.querySelector('.nav-menu');
+  const navToggle = document.getElementById('navToggle');
+  const navMenu = document.getElementById('navMenu');
 
   if (!navToggle || !navMenu) return;
 
-  navToggle.addEventListener('click', () => {
-    const isOpen = navMenu.style.display === 'flex';
-    if (isOpen) {
-      navMenu.style.display = 'none';
-    } else {
-      navMenu.style.display = 'flex';
-      navMenu.style.flexDirection = 'column';
-      navMenu.style.position = 'absolute';
-      navMenu.style.top = '85px';
-      navMenu.style.left = '0';
-      navMenu.style.right = '0';
-      navMenu.style.background = '#ffffff';
-      navMenu.style.padding = '24px';
-      navMenu.style.borderBottom = '2px solid #e2e8f0';
-      navMenu.style.boxShadow = '0 10px 30px rgba(0,0,0,0.1)';
+  navToggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isActive = navMenu.classList.toggle('active');
+    navToggle.innerHTML = isActive ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
+  });
+
+  // Close menu when clicking on any navigation link
+  const navLinks = navMenu.querySelectorAll('.nav-link');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('active');
+      navToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+    });
+  });
+
+  // Close when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
+      if (navMenu.classList.contains('active')) {
+        navMenu.classList.remove('active');
+        navToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+      }
     }
   });
 }
@@ -205,10 +221,10 @@ function initScrollEffects() {
   const navbar = document.querySelector('.navbar');
   if (!navbar) return;
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 30) {
-      navbar.style.boxShadow = '0 6px 25px rgba(0,0,0,0.08)';
+    if (window.scrollY > 20) {
+      navbar.style.boxShadow = '0 4px 20px rgba(0,0,0,0.06)';
     } else {
-      navbar.style.boxShadow = '0 4px 20px rgba(0,0,0,0.04)';
+      navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.04)';
     }
   });
 }

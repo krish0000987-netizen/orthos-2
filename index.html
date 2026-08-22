@@ -21,16 +21,16 @@
     <div class="container top-bar-content">
       <div class="top-bar-info">
         <span class="top-status-badge">
-          <span class="pulse-dot"></span> OPD Open Today for Consultations
+          <span class="pulse-dot"></span> OPD Open Today
         </span>
-        <span><i class="fa-solid fa-clock"></i> OPD Hours: Mon - Sat 10:00 AM - 1:30 PM & 5:00 PM - 8:30 PM</span>
+        <span class="top-hours"><i class="fa-solid fa-clock"></i> Mon - Sat: 10:00 AM - 1:30 PM & 5:00 PM - 8:30 PM</span>
       </div>
       <div class="top-bar-actions">
         <a href="tel:+917410702413" class="top-contact-link">
-          <i class="fa-solid fa-phone-volume" style="color: #fef08a;"></i> +91 7410702413
+          <i class="fa-solid fa-phone-volume"></i> +91 7410702413
         </a>
-        <a href="https://wa.me/917410702413" target="_blank" class="top-contact-link" style="color: #34d399;">
-          <i class="fa-brands fa-whatsapp"></i> WhatsApp Appointment
+        <a href="https://wa.me/917410702413" target="_blank" class="top-contact-link top-wa-link">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp
         </a>
       </div>
     </div>
@@ -43,11 +43,11 @@
         <img src="assets/orthos_logo.png" alt="Orthos Speciality Clinic Logo">
         <div class="brand-text">
           <span class="brand-title">ORTHOS</span>
-          <span class="brand-subtitle">YOUR BONE & JOINT EXPERT</span>
+          <span class="brand-subtitle">BONE & JOINT EXPERT</span>
         </div>
       </a>
 
-      <ul class="nav-menu">
+      <ul class="nav-menu" id="navMenu">
         <li><a href="#hero" class="nav-link active">Home</a></li>
         <li><a href="#about" class="nav-link">About Dr. Dharm</a></li>
         <li><a href="#specialties" class="nav-link">Specialties</a></li>
@@ -55,15 +55,24 @@
         <li><a href="#facilities" class="nav-link">Facilities</a></li>
         <li><a href="#recovery" class="nav-link">Patient Recovery</a></li>
         <li><a href="#contact" class="nav-link">Location & OPD</a></li>
+        <li class="mobile-menu-cta">
+          <button class="btn btn-gold trigger-booking-modal" style="width: 100%;">
+            <i class="fa-solid fa-calendar-check"></i> Book OPD Consultation
+          </button>
+        </li>
       </ul>
 
-      <button class="btn btn-gold trigger-booking-modal">
-        <i class="fa-solid fa-calendar-check"></i> Book OPD Consultation
-      </button>
-
-      <button class="nav-toggle" aria-label="Toggle Menu">
-        <i class="fa-solid fa-bars"></i>
-      </button>
+      <div class="navbar-actions">
+        <a href="tel:+917410702413" class="mobile-call-btn" aria-label="Call Doctor">
+          <i class="fa-solid fa-phone"></i>
+        </a>
+        <button class="btn btn-gold desktop-book-btn trigger-booking-modal">
+          <i class="fa-solid fa-calendar-check"></i> Book OPD
+        </button>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
     </div>
   </nav>
 
