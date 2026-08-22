@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. Dharm Bedwal | Consultant Orthopaedic Surgeon | Orthos @ Krsnaa Diagnostics Navi Mumbai</title>
+  <meta name="description" content="Official website of Dr. Dharm Bedwal (MBBS, DNB Ortho) - Consultant Orthopaedic Surgeon at Orthos Clinic, Seawoods (W), Navi Mumbai. Expert in Orthopaedic Trauma, Spine & Back Care, and Joint Replacement Surgery.">
+  <meta name="keywords" content="Dr Dharm Bedwal, Orthopaedic Surgeon Seawoods, Joint Replacement Navi Mumbai, Spine Specialist Navi Mumbai, Knee Replacement Doctor, Orthos Krsnaa Diagnostics">
+  
+  <!-- Favicon & Icons -->
+  <link rel="icon" type="image/png" href="assets/orthos_logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom White Theme Design System -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- SECTION 1: TOP EMERGENCY & ANNOUNCEMENT BAR -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="top-bar-info">
+        <span class="top-status-badge">
+          <span class="pulse-dot"></span> OPD Open Today for Consultations
+        </span>
+        <span><i class="fa-solid fa-clock"></i> OPD Hours: Mon - Sat 10:00 AM - 1:30 PM & 5:00 PM - 8:30 PM</span>
+      </div>
+      <div class="top-bar-actions">
+        <a href="tel:+917410702413" class="top-contact-link">
+          <i class="fa-solid fa-phone-volume" style="color: #fef08a;"></i> +91 7410702413
+        </a>
+        <a href="https://wa.me/917410702413" target="_blank" class="top-contact-link" style="color: #34d399;">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp Appointment
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 2: LUXURY SOLID WHITE NAVBAR -->
+  <nav class="navbar">
+    <div class="container navbar-container">
+      <a href="#" class="brand-logo">
+        <img src="assets/orthos_logo.png" alt="Orthos Speciality Clinic Logo">
+        <div class="brand-text">
+          <span class="brand-title">ORTHOS</span>
+          <span class="brand-subtitle">YOUR BONE & JOINT EXPERT</span>
+        </div>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About Dr. Dharm</a></li>
+        <li><a href="#specialties" class="nav-link">Specialties</a></li>
+        <li><a href="#conditions" class="nav-link">Condition Guide</a></li>
+        <li><a href="#facilities" class="nav-link">Facilities</a></li>
+        <li><a href="#recovery" class="nav-link">Patient Recovery</a></li>
+        <li><a href="#contact" class="nav-link">Location & OPD</a></li>
+      </ul>
+
+      <button class="btn btn-gold trigger-booking-modal">
+        <i class="fa-solid fa-calendar-check"></i> Book OPD Consultation
+      </button>
+
+      <button class="nav-toggle" aria-label="Toggle Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- SECTION 3: HERO SHOWCASE SECTION -->
+  <section id="hero" class="hero">
+    <div class="container hero-grid">
+      
+      <div class="hero-content">
+        <div class="hero-tag">
+          <i class="fa-solid fa-award"></i> CONSULTANT ORTHOPAEDIC SURGEON
+        </div>
+        <h1 class="hero-title">
+          World-Class <span class="gradient-text">Orthopaedic Care</span> & Precision Joint Surgery
+        </h1>
+        <p class="hero-subtitle">
+          Comprehensive care for bone, joint, muscle, and spine conditions by <strong>Dr. Dharm Bedwal</strong> (MBBS, DNB Ortho). Delivering compassionate clinical evaluation and state-of-the-art surgical excellence at <strong>Orthos @ Krsnaa Diagnostics Ltd</strong>, Seawoods (W), Navi Mumbai.
+        </p>
+
+        <div class="doctor-badges">
+          <div class="doc-badge-pill"><i class="fa-solid fa-user-doctor"></i> MBBS, DNB Ortho</div>
+          <div class="doc-badge-pill"><i class="fa-solid fa-bone"></i> Trauma Specialist</div>
+          <div class="doc-badge-pill"><i class="fa-solid fa-child-reaching"></i> Spine & Back Care</div>
+          <div class="doc-badge-pill"><i class="fa-solid fa-kit-medical"></i> Joint Replacement Surgery</div>
+        </div>
+
+        <div class="hero-cta-group">
+          <a href="#appointment" class="btn btn-primary trigger-booking-modal">
+            <i class="fa-solid fa-paper-plane"></i> Book OPD Consultation
+          </a>
+          <a href="#conditions" class="btn btn-outline">
+            <i class="fa-solid fa-book-medical"></i> Learn About Your Condition
+          </a>
+        </div>
+
+        <!-- Quick Hero Booking Form -->
+        <div class="quick-booking-bar">
+          <form id="heroQuickForm" class="quick-booking-form">
+            <div class="form-group">
+              <label><i class="fa-solid fa-stethoscope"></i> Specialty Care</label>
+              <select id="heroServiceSelect" class="form-control">
+                <option value="Joint Replacement Surgery">Joint Replacement Surgery</option>
+                <option value="Spine & Back Care">Spine & Back Pain Evaluation</option>
+                <option value="Orthopaedic Trauma">Trauma & Fracture Reconstruction</option>
+                <option value="General OPD Consultation">General OPD Consultation</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label><i class="fa-solid fa-calendar-days"></i> OPD Date</label>
+              <input type="date" id="heroDateSelect" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label><i class="fa-solid fa-phone"></i> Mobile Number</label>
+              <input type="tel" id="heroPhoneInput" class="form-control" placeholder="+91 98765 43210" required>
+            </div>
+            <button type="submit" class="btn-reserve-slot" id="heroReserveBtn">
+              <span>Reserve Slot</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Hero Visuals Right -->
+      <div class="hero-visual-wrapper">
+        
+        <!-- Trust Bar Above Photo -->
+        <div class="hero-trust-bar">
+          <div class="hero-trust-pill">
+            <i class="fa-solid fa-star"></i>
+            <div class="trust-pill-text">
+              <span class="trust-pill-val">4.9 / 5.0</span>
+              <span class="trust-pill-lbl">1,200+ Patients</span>
+            </div>
+          </div>
+          <div class="hero-trust-pill">
+            <i class="fa-solid fa-microscope" style="color: var(--primary-blue);"></i>
+            <div class="trust-pill-text">
+              <span class="trust-pill-val">Robotic Tech</span>
+              <span class="trust-pill-lbl">Precision Surgery</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Full Doctor Portrait Card -->
+        <div class="hero-doctor-card">
+          <div class="hero-img-box">
+            <img src="assets/dr_dharm_bedwal.png" alt="Dr. Dharm Bedwal - Consultant Orthopaedic Surgeon">
+          </div>
+          <div class="hero-doctor-info-bar">
+            <span class="doc-verified-badge"><i class="fa-solid fa-circle-check"></i> Verified Specialist</span>
+            <h3 class="hero-doctor-name">Dr. Dharm Bedwal</h3>
+            <p class="hero-doctor-title">MBBS, DNB Ortho</p>
+            <p class="hero-doctor-subtitle">Consultant Orthopaedic Surgeon</p>
+          </div>
+        </div>
+
+        <!-- Hero Section Photo Gallery Grid -->
+        <div class="hero-section-images">
+          <div class="hero-sub-img-card">
+            <img src="assets/hero_robotic_surgery.jpg" alt="Robotic Joint Replacement Operating Suite">
+            <div class="hero-sub-img-caption">Robotic Joint Surgery Suite</div>
+          </div>
+          <div class="hero-sub-img-card">
+            <img src="assets/hero_spine_biomechanics.jpg" alt="Spine Biomechanics Diagnostic Center">
+            <div class="hero-sub-img-caption">Spine Diagnostic Imaging</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 4: ABOUT DR. DHARM BEDWAL -->
+  <section id="about" class="section-padding" style="background: var(--bg-subtle);">
+    <div class="container">
+      <div class="about-grid">
+        
+        <div class="about-image-stack">
+          <div class="about-main-img">
+            <img src="assets/dr_dharm_bedwal.png" alt="Dr. Dharm Bedwal Orthopaedic Consultation">
+          </div>
+          <div class="about-images-grid">
+            <div class="about-sub-img">
+              <img src="assets/about_consultation_care.jpg" alt="Patient Consultation Room">
+            </div>
+            <div class="about-sub-img">
+              <img src="assets/about_surgical_precision.jpg" alt="Digital Diagnostic Surgical Workstation">
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="section-badge"><i class="fa-solid fa-user-check"></i> Meet Your Surgeon</div>
+          <h2 class="section-title">Dedicated to <span class="gradient-text">Precision Orthopaedics</span> & Patient Trust</h2>
+          <p style="font-size: 1.1rem; color: var(--text-main); line-height: 1.8; font-weight: 500;">
+            <strong>Dr. Dharm Bedwal</strong> is an experienced Orthopaedic Surgeon providing comprehensive, evidence-based care for bone, joint, muscle, and spine-related conditions.
+          </p>
+
+          <div class="quote-box">
+            "Through a combination of clinical experience, careful evaluation, and patient-focused treatment, Dr. Dharm aims to provide personalised care while helping patients understand their condition and treatment options."
+          </div>
+
+          <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 24px; font-weight: 500;">
+            Whether dealing with acute trauma, chronic knee or hip arthritis, or disabling back pain, Dr. Dharm believes in transparent communication, thorough diagnostic workups, and tailored conservative or surgical intervention.
+          </p>
+
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-num">15+</div>
+              <div class="stat-label">Years Clinical Focus</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-num">3,500+</div>
+              <div class="stat-label">Successful Surgeries</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-num">99%</div>
+              <div class="stat-label">Patient Satisfaction</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: CORE SURGICAL SPECIALTIES -->
+  <section id="specialties" class="section-padding">
+    <div class="container">
+      <div style="text-align: center; max-width: 800px; margin: 0 auto 50px;">
+        <div class="section-badge"><i class="fa-solid fa-notes-medical"></i> Surgical Expertise</div>
+        <h2 class="section-title">Comprehensive <span class="gold-gradient-text">Orthopaedic Specialties</span></h2>
+        <p class="section-desc" style="margin-left: auto; margin-right: auto;">
+          Delivering advanced surgical solutions and conservative management across traumatology, spinal health, and reconstructive joint replacement.
+        </p>
+      </div>
+
+      <div class="specialty-grid">
+        
+        <!-- Specialty 1 -->
+        <div class="specialty-card">
+          <div class="specialty-img-box">
+            <img src="assets/specialty_trauma_care.jpg" alt="Orthopaedic Trauma & Fracture Care">
+          </div>
+          <div class="specialty-body">
+            <h3 class="specialty-title">Orthopaedic Trauma</h3>
+            <p class="specialty-desc">
+              Immediate expert management of complex bone fractures, articular joint dislocations, and polytrauma emergencies.
+            </p>
+            <ul class="specialty-features">
+              <li><i class="fa-solid fa-circle-check"></i> Complex Intra-Articular Fractures</li>
+              <li><i class="fa-solid fa-circle-check"></i> Minimally Invasive Locking Plate Fixation</li>
+              <li><i class="fa-solid fa-circle-check"></i> Non-union & Mal-union Revision</li>
+            </ul>
+            <div class="specialty-footer-img">
+              <span style="font-size: 0.85rem; color: var(--accent-gold-dark); font-weight: 800;">24/7 Emergency Care</span>
+              <button class="btn btn-outline trigger-booking-modal" style="padding: 6px 16px; font-size: 0.8rem;">Consult</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Specialty 2 -->
+        <div class="specialty-card">
+          <div class="specialty-img-box">
+            <img src="assets/specialty_spine_care.jpg" alt="Spine & Back Problems">
+          </div>
+          <div class="specialty-body">
+            <h3 class="specialty-title">Spine & Back Problems</h3>
+            <p class="specialty-desc">
+              Precision diagnostic evaluation and relief for acute sciatic pain, herniated discs, spinal stenosis, and spondylosis.
+            </p>
+            <ul class="specialty-features">
+              <li><i class="fa-solid fa-circle-check"></i> Sciatica & Disc Decompression</li>
+              <li><i class="fa-solid fa-circle-check"></i> Cervical & Lumbar Spine Care</li>
+              <li><i class="fa-solid fa-circle-check"></i> Targeted Nerve Injections & Rehab</li>
+            </ul>
+            <div class="specialty-footer-img">
+              <span style="font-size: 0.85rem; color: var(--primary-blue); font-weight: 800;">Conservative & Surgical</span>
+              <button class="btn btn-outline trigger-booking-modal" style="padding: 6px 16px; font-size: 0.8rem;">Consult</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Specialty 3 -->
+        <div class="specialty-card">
+          <div class="specialty-img-box">
+            <img src="assets/specialty_knee_replacement.jpg" alt="Joint Replacement Surgery">
+          </div>
+          <div class="specialty-body">
+            <h3 class="specialty-title">Joint Replacement Surgery</h3>
+            <p class="specialty-desc">
+              State-of-the-art total and partial joint replacement for severe knee and hip arthritis using long-lasting bio-implants.
+            </p>
+            <ul class="specialty-features">
+              <li><i class="fa-solid fa-circle-check"></i> Computer-Assisted Knee Replacement</li>
+              <li><i class="fa-solid fa-circle-check"></i> Ceramic Bearing Hip Replacement</li>
+              <li><i class="fa-solid fa-circle-check"></i> Fast-Track Rapid Mobility Protocol</li>
+            </ul>
+            <div class="specialty-footer-img">
+              <span style="font-size: 0.85rem; color: var(--accent-green); font-weight: 800;">Painless Walking</span>
+              <button class="btn btn-outline trigger-booking-modal" style="padding: 6px 16px; font-size: 0.8rem;">Consult</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bonus Specialty Visual Card -->
+      <div style="margin-top: 40px; background: #ffffff; border: 2px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 30px; display: grid; grid-template-columns: 1fr 2fr; gap: 30px; align-items: center; box-shadow: var(--shadow-card);">
+        <div style="height: 180px; border-radius: var(--radius-md); overflow: hidden; border: 1.5px solid var(--border-subtle); background: #f8fafc;">
+          <img src="assets/specialty_hip_replacement.jpg" alt="Hip Joint Replacement Precision" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div>
+          <h4 style="font-size: 1.4rem; color: var(--text-main); margin-bottom: 10px; font-weight: 800;">Ceramic & Bio-Compatible Joint Implants</h4>
+          <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 16px;">
+            Dr. Dharm utilizes premium international implants with advanced ceramic and highly cross-linked polyethylene friction-reduction surfaces, engineered for 25+ years of active joint longevity.
+          </p>
+          <a href="#conditions" class="btn btn-primary trigger-booking-modal"><i class="fa-solid fa-calendar-check"></i> Schedule Joint Evaluation</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 6: INTERACTIVE CONDITION EXPLORER -->
+  <section id="conditions" class="section-padding" style="background: var(--bg-subtle);">
+    <div class="container">
+      <div style="text-align: center; max-width: 800px; margin: 0 auto 40px;">
+        <div class="section-badge"><i class="fa-solid fa-graduation-cap"></i> Patient Education Hub</div>
+        <h2 class="section-title">Learn About Your <span class="gradient-text">Condition & Treatment</span></h2>
+        <p style="color: var(--text-muted); font-size: 1.1rem; font-weight: 600;">
+          "Understand your treatment options. Take an informed step toward better orthopaedic health."
+        </p>
+      </div>
+
+      <div class="condition-explorer">
+        <div class="condition-tabs">
+          <button class="tab-btn active" data-condition="knee"><i class="fa-solid fa-joint"></i> Knee Pain & Arthritis</button>
+          <button class="tab-btn" data-condition="spine"><i class="fa-solid fa-align-center"></i> Back & Sciatica</button>
+          <button class="tab-btn" data-condition="trauma"><i class="fa-solid fa-bone"></i> Fractures & Trauma</button>
+          <button class="tab-btn" data-condition="hip"><i class="fa-solid fa-person-walking"></i> Hip Stiffness</button>
+        </div>
+
+        <!-- Panel 1: Knee -->
+        <div id="condition-knee" class="condition-content-grid condition-panel">
+          <div class="condition-details">
+            <h3>Severe Knee Osteoarthritis & Cartilage Wear</h3>
+            <p style="color: var(--text-main); margin-bottom: 20px; line-height: 1.7; font-weight: 500;">
+              Knee arthritis occurs when protective joint cartilage gradually wears down, causing bone-on-bone friction, severe pain while walking, swelling, and bowing of knees.
+            </p>
+
+            <div class="condition-symptoms">
+              <h4 style="color: var(--accent-gold-dark); margin-bottom: 8px; font-weight: 800;"><i class="fa-solid fa-triangle-exclamation"></i> Common Symptoms:</h4>
+              <p style="color: var(--text-main); font-size: 0.95rem; font-weight: 600;">
+                Pain climbing stairs, stiffness after resting, audible grinding sound (crepitus), difficulty standing straight.
+              </p>
+            </div>
+
+            <div class="condition-treatment-options">
+              <div class="option-box non-surgical">
+                <div class="option-title">Conservative Care</div>
+                <p style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">Hyaluronic acid injections, targeted quad strengthening, lifestyle modification.</p>
+              </div>
+              <div class="option-box surgical">
+                <div class="option-title">Precision Surgery</div>
+                <p style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">Total Knee Replacement (TKR) or partial knee resurfacing with sub-mm alignment.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="condition-visual-box">
+            <img src="assets/condition_knee.jpg" alt="Knee Joint Clinical Evaluation">
+          </div>
+        </div>
+
+        <!-- Panel 2: Spine -->
+        <div id="condition-spine" class="condition-content-grid condition-panel" style="display: none;">
+          <div class="condition-details">
+            <h3>Lumbar Disc Herniation & Sciatica Pain</h3>
+            <p style="color: var(--text-main); margin-bottom: 20px; line-height: 1.7; font-weight: 500;">
+              Sciatica manifests as sharp shooting pain, numbness, or weakness radiating from the lower back down the sciatic nerve into the legs due to disc prolapse.
+            </p>
+
+            <div class="condition-symptoms">
+              <h4 style="color: var(--accent-gold-dark); margin-bottom: 8px; font-weight: 800;"><i class="fa-solid fa-triangle-exclamation"></i> Common Symptoms:</h4>
+              <p style="color: var(--text-main); font-size: 0.95rem; font-weight: 600;">
+                Sharp leg pain when sitting, tingling in feet, lower back stiffness, difficulty walking extended distances.
+              </p>
+            </div>
+
+            <div class="condition-treatment-options">
+              <div class="option-box non-surgical">
+                <div class="option-title">Non-Surgical Path</div>
+                <p style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">Selective nerve block injections, lumbar traction, core physiotherapy.</p>
+              </div>
+              <div class="option-box surgical">
+                <div class="option-title">Micro-Spine Surgery</div>
+                <p style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">Minimally invasive discectomy or spinal decompression.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="condition-visual-box">
+            <img src="assets/condition_spine.jpg" alt="Spine & Sciatica Clinical Examination">
+          </div>
+        </div>
+
+        <!-- Panel 3: Trauma -->
+        <div id="condition-trauma" class="condition-content-grid condition-panel" style="display: none;">
+          <div class="condition-details">
+            <h3>Complex Traumatic Fractures & Bone Dislocation</h3>
+            <p style="color: var(--text-main); margin-bottom: 20px; line-height: 1.7; font-weight: 500;">
+              Accidents, falls, or high-impact athletic trauma can fracture long bones or crush joint surfaces, requiring immediate stabilization.
+            </p>
+
+            <div class="condition-symptoms">
+              <h4 style="color: var(--accent-gold-dark); margin-bottom: 8px; font-weight: 800;"><i class="fa-solid fa-triangle-exclamation"></i> Immediate Indicators:</h4>
+              <p style="color: var(--text-main); font-size: 0.95rem; font-weight: 600;">
+                Severe acute pain, visible bone deformity, inability to bear weight, rapid localized swelling.
+              </p>
+            </div>
+
+            <div class="condition-treatment-options">
+              <div class="option-box non-surgical">
+                <div class="option-title">Closed Reduction</div>
+                <p style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">Casting, splinting, and radiological monitoring for simple fractures.</p>
+              </div>
+              <div class="option-box surgical">
+                <div class="option-title">Internal Fixation (ORIF)</div>
+                <p style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">Titanium plates, intramedullary rods, and anatomical joint reconstruction.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="condition-visual-box">
+            <img src="assets/condition_trauma.jpg" alt="Orthopaedic Trauma & Fracture Fixation">
+          </div>
+        </div>
+
+        <!-- Panel 4: Hip -->
+        <div id="condition-hip" class="condition-content-grid condition-panel" style="display: none;">
+          <div class="condition-details">
+            <h3>Avascular Necrosis (AVN) & Hip Osteoarthritis</h3>
+            <p style="color: var(--text-main); margin-bottom: 20px; line-height: 1.7; font-weight: 500;">
+              Loss of blood supply to the femoral head or chronic hip degeneration causes severe groin pain, leg length discrepancy, and restricted hip motion.
+            </p>
+
+            <div class="condition-symptoms">
+              <h4 style="color: var(--accent-gold-dark); margin-bottom: 8px; font-weight: 800;"><i class="fa-solid fa-triangle-exclamation"></i> Common Symptoms:</h4>
+              <p style="color: var(--text-main); font-size: 0.95rem; font-weight: 600;">
+                Deep groin pain, limping gait, pain while squatting or sitting cross-legged, stiffness.
+              </p>
+            </div>
+
+            <div class="condition-treatment-options">
+              <div class="option-box non-surgical">
+                <div class="option-title">Early Stage Core</div>
+                <p style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">Bisphosphonates, core decompression, non-weight bearing therapy.</p>
+              </div>
+              <div class="option-box surgical">
+                <div class="option-title">Total Hip Replacement</div>
+                <p style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">Anatomical ceramic hip replacement for permanent joint restoration.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="condition-visual-box">
+            <img src="assets/condition_hip.jpg" alt="Hip Joint Anatomy Examination">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 7: CLINIC & DIAGNOSTIC FACILITIES -->
+  <section id="facilities" class="section-padding">
+    <div class="container">
+      <div style="text-align: center; max-width: 800px; margin: 0 auto 50px;">
+        <div class="section-badge"><i class="fa-solid fa-hospital"></i> Infrastructure & Diagnostics</div>
+        <h2 class="section-title">Orthos @ <span class="gradient-text">Krsnaa Diagnostics Ltd</span></h2>
+        <p style="color: var(--text-muted); font-size: 1.1rem;">
+          Conveniently located at Shop No 3-6, Om Nilkanth CHS, Sector 42-A, Seawoods (W), offering fully integrated diagnostic lab & radiology support under one roof.
+        </p>
+      </div>
+
+      <div class="facilities-grid">
+        
+        <div class="facility-card">
+          <div class="facility-img-wrapper">
+            <img src="assets/facility_reception.jpg" alt="Orthos Clinic Reception Lounge">
+          </div>
+          <div class="facility-info">
+            <h3 style="font-size: 1.3rem; color: var(--text-main); margin-bottom: 10px; font-weight: 800;"><i class="fa-solid fa-chair" style="color: var(--accent-gold-dark);"></i> Executive OPD Consultation Lounge</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">
+              Comfortable, air-conditioned patient waiting area with prioritized appointment scheduling, ensuring zero wait-time stress.
+            </p>
+          </div>
+        </div>
+
+        <div class="facility-card">
+          <div class="facility-img-wrapper">
+            <img src="assets/facility_diagnostic_suite.jpg" alt="Digital Diagnostic Suite">
+          </div>
+          <div class="facility-info">
+            <h3 style="font-size: 1.3rem; color: var(--text-main); margin-bottom: 10px; font-weight: 800;"><i class="fa-solid fa-x-ray" style="color: var(--primary-blue);"></i> High-Definition Digital Radiology & Pathology</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">
+              In-house digital X-Ray scans, joint MRI integration, bone density (DEXA) evaluation, and immediate diagnostic lab reports.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 8: PATIENT RECOVERY JOURNEYS -->
+  <section id="recovery" class="section-padding" style="background: var(--bg-subtle);">
+    <div class="container">
+      <div style="text-align: center; max-width: 800px; margin: 0 auto 50px;">
+        <div class="section-badge"><i class="fa-solid fa-heart-pulse"></i> Patient Recovery Stories</div>
+        <h2 class="section-title">Restoring <span class="gold-gradient-text">Mobility & Life Quality</span></h2>
+        <p style="color: var(--text-muted); font-size: 1.1rem;">
+          Real recovery milestones from patients treated by Dr. Dharm Bedwal across Navi Mumbai.
+        </p>
+      </div>
+
+      <div class="testimonials-grid">
+        
+        <div class="testimonial-card">
+          <div class="rating-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p style="color: var(--text-main); font-size: 0.95rem; line-height: 1.7; flex-grow: 1; font-weight: 500;">
+            "After suffering from severe osteoarthritis in both knees for 5 years, I got bilateral knee replacement surgery with Dr. Dharm Bedwal. I was walking pain-free by week 3!"
+          </p>
+          
+          <div class="recovery-visual-mini">
+            <img src="assets/patient_recovery_knee.jpg" alt="Active Pain-Free Patient Walking Post Knee Replacement">
+          </div>
+
+          <div class="patient-header">
+            <div class="patient-avatar">RM</div>
+            <div class="patient-info">
+              <h4>Rajesh M. (Age 64)</h4>
+              <p>Total Knee Replacement</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="rating-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p style="color: var(--text-main); font-size: 0.95rem; line-height: 1.7; flex-grow: 1; font-weight: 500;">
+            "Dr. Dharm diagnosed my severe sciatic nerve compression when other doctors suggested open spine surgery. With his targeted treatment plan, my leg pain is completely gone!"
+          </p>
+
+          <div class="recovery-visual-mini">
+            <img src="assets/patient_recovery_spine.jpg" alt="Healthy Spine Posture Recovery">
+          </div>
+
+          <div class="patient-header">
+            <div class="patient-avatar" style="background: var(--accent-gold-dark);">SN</div>
+            <div class="patient-info">
+              <h4>Sunita N. (Age 48)</h4>
+              <p>Spine & Sciatica Care</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="rating-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p style="color: var(--text-main); font-size: 0.95rem; line-height: 1.7; flex-grow: 1; font-weight: 500;">
+            "I met with a severe road accident fracture in Seawoods. Dr. Dharm handled my emergency surgery with exceptional skill. His guidance made my recovery smooth."
+          </p>
+
+          <div class="recovery-visual-mini">
+            <img src="assets/patient_recovery_trauma.jpg" alt="Athletic Bone Trauma Recovery">
+          </div>
+
+          <div class="patient-header">
+            <div class="patient-avatar" style="background: var(--accent-cyan);">AK</div>
+            <div class="patient-info">
+              <h4>Amit K. (Age 32)</h4>
+              <p>Complex Fracture Trauma</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 9: APPOINTMENT BANNER -->
+  <section id="appointment" class="section-padding">
+    <div class="container">
+      <div class="appointment-banner-box">
+        <div>
+          <div class="section-badge"><i class="fa-solid fa-calendar-check"></i> Prior Appointments</div>
+          <h2 style="font-size: 2.4rem; color: var(--text-main); margin-bottom: 20px; font-weight: 800;">
+            Take an Informed Step Toward <span class="gold-gradient-text">Better Joint Health</span>
+          </h2>
+          <p style="color: var(--text-muted); font-size: 1.05rem; margin-bottom: 30px; line-height: 1.7;">
+            Consult with Dr. Dharm Bedwal at Orthos @ Krsnaa Diagnostics Ltd. Comprehensive clinical evaluation, X-Ray assessment, and personalized care planning.
+          </p>
+          <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+            <button class="btn btn-gold trigger-booking-modal">
+              <i class="fa-solid fa-user-plus"></i> Schedule OPD Appointment
+            </button>
+            <a href="https://wa.me/917410702413" target="_blank" class="btn btn-outline" style="border-color: var(--accent-green); color: var(--accent-green);">
+              <i class="fa-brands fa-whatsapp"></i> Quick WhatsApp Booking
+            </a>
+          </div>
+        </div>
+
+        <div style="text-align: center;">
+          <img src="assets/booking_orthos_building.jpg" alt="Orthos Clinic Seawoods Facility Exterior" style="width: 100%; border-radius: var(--radius-md); border: 2px solid var(--border-subtle); box-shadow: var(--shadow-card);">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 10: LOCATION, TIMINGS & MAP -->
+  <section id="contact" class="section-padding" style="background: var(--bg-subtle);">
+    <div class="container">
+      <div style="text-align: center; max-width: 800px; margin: 0 auto 50px;">
+        <div class="section-badge"><i class="fa-solid fa-location-dot"></i> Clinic Location</div>
+        <h2 class="section-title">Visit <span class="gradient-text">Orthos Speciality Clinic</span></h2>
+        <p style="color: var(--text-muted); font-size: 1.1rem;">
+          Conveniently situated in Seawoods (West), Navi Mumbai with ample parking and diagnostic services.
+        </p>
+      </div>
+
+      <div class="location-grid">
+        
+        <div class="info-box-card">
+          <h3 style="font-size: 1.5rem; color: var(--text-main); margin-bottom: 20px; font-weight: 800;">
+            <i class="fa-solid fa-clinic-medical" style="color: var(--accent-gold-dark);"></i> Clinic Address & Hours
+          </h3>
+
+          <p style="font-size: 1.05rem; color: var(--text-main); margin-bottom: 20px; line-height: 1.7; font-weight: 600;">
+            <strong>Orthos @ KRSNAA DIAGNOSTICS LTD</strong><br>
+            SHOP NO 3-6, OM NILKANTH APARTMENT CHS, SECTOR 42-A,<br>
+            SEAWOODS (W), NAVI MUMBAI 400706, M S INDIA
+          </p>
+
+          <div style="background: #f8fafc; border: 1.5px solid var(--border-subtle); padding: 20px; border-radius: var(--radius-md); margin-bottom: 24px;">
+            <h4 style="color: var(--primary-blue); margin-bottom: 12px; font-weight: 800;"><i class="fa-solid fa-calendar-days"></i> OPD Consultation Timings:</h4>
+            <table class="timing-table">
+              <tr>
+                <td><strong>Monday - Saturday (Morning)</strong></td>
+                <td style="text-align: right; color: var(--accent-green); font-weight: 800;">10:00 AM – 1:30 PM</td>
+              </tr>
+              <tr>
+                <td><strong>Monday - Saturday (Evening)</strong></td>
+                <td style="text-align: right; color: var(--accent-green); font-weight: 800;">5:00 PM – 8:30 PM</td>
+              </tr>
+              <tr>
+                <td><strong>Sunday</strong></td>
+                <td style="text-align: right; color: var(--accent-gold-dark); font-weight: 800;">Prior Appointment Only</td>
+              </tr>
+            </table>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <a href="tel:+917410702413" style="color: var(--text-main); text-decoration: none; font-size: 1.1rem; font-weight: 800;">
+              <i class="fa-solid fa-phone" style="color: var(--accent-gold-dark); width: 24px;"></i> +91 7410702413 (Appointments)
+            </a>
+            <a href="mailto:dr.dharmbedwal@gmail.com" style="color: var(--text-main); text-decoration: none; font-size: 1rem; font-weight: 600;">
+              <i class="fa-solid fa-envelope" style="color: var(--primary-blue); width: 24px;"></i> dr.dharmbedwal@gmail.com
+            </a>
+            <a href="http://www.docorthos.com" target="_blank" style="color: var(--text-main); text-decoration: none; font-size: 1rem; font-weight: 600;">
+              <i class="fa-solid fa-globe" style="color: var(--accent-green); width: 24px;"></i> www.docorthos.com
+            </a>
+          </div>
+        </div>
+
+        <div class="map-wrapper">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.503799650228!2d73.0135!3d19.041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c3c000000001%3A0x1!2sSeawoods%2C%20Navi%20Mumbai!5e0!3m2!1sen!2sin!4v1690000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 11: PATIENT FAQS ACCORDION -->
+  <section class="section-padding">
+    <div class="container">
+      <div style="text-align: center; max-width: 800px; margin: 0 auto 50px;">
+        <div class="section-badge"><i class="fa-solid fa-circle-question"></i> Help & Guidance</div>
+        <h2 class="section-title">Frequently Asked <span class="gold-gradient-text">Questions</span></h2>
+        <p style="color: var(--text-muted); font-size: 1.1rem;">
+          Clear answers to help you prepare for your consultation and treatment.
+        </p>
+      </div>
+
+      <div class="faq-list">
+        
+        <div class="faq-item active">
+          <div class="faq-question">
+            <span>When should I consider knee or hip replacement surgery?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            Joint replacement is considered when severe pain restricts daily walking, standing, or sleep, and non-surgical treatments (physiotherapy, medications, joint injections) no longer provide adequate relief. Dr. Dharm evaluates your X-rays and lifestyle needs to recommend the right timing.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Can back pain or sciatica be cured without spine surgery?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            Yes! Over 85-90% of spine and sciatica cases resolve with conservative treatment including targeted physical therapy, posture corrections, anti-inflammatory care, and selective nerve root blocks. Surgery is only recommended if severe neurological deficits or unmanaged pain persist.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>How do I book an OPD consultation with Dr. Dharm Bedwal?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            OPD consultations are conducted by prior appointment. You can book instantly by calling <strong>+91 7410702413</strong>, sending a WhatsApp message, or using the online appointment form on this page.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Are cashless mediclaim & insurance policies supported?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            Yes, for surgical procedures and hospital admissions, major health insurance policies and corporate TPA cashless approvals are processed with full documentation support.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 12: LUXURY FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div>
+          <div class="footer-brand">
+            <img src="assets/orthos_logo.png" alt="Orthos Speciality Clinic Logo">
+          </div>
+          <p style="color: #cbd5e1; font-size: 0.95rem; margin-bottom: 20px; line-height: 1.7;">
+            <strong>Dr. Dharm Bedwal</strong> (MBBS, DNB Ortho)<br>
+            Consultant Orthopaedic Surgeon delivering advanced joint replacement, spine care, and trauma management in Navi Mumbai.
+          </p>
+          <div style="display: flex; gap: 12px;">
+            <a href="tel:+917410702413" class="btn btn-gold" style="padding: 8px 18px; font-size: 0.85rem;"><i class="fa-solid fa-phone"></i> Call Now</a>
+            <a href="https://wa.me/917410702413" target="_blank" class="btn btn-outline" style="padding: 8px 18px; font-size: 0.85rem; border-color: #34d399; color: #34d399; background: transparent;"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About Dr. Dharm Bedwal</a></li>
+            <li><a href="#specialties">Surgical Specialties</a></li>
+            <li><a href="#conditions">Condition Guide</a></li>
+            <li><a href="#facilities">Clinic Facilities</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Surgical Care</h4>
+          <ul class="footer-links">
+            <li><a href="#specialties">Orthopaedic Trauma</a></li>
+            <li><a href="#specialties">Total Knee Replacement</a></li>
+            <li><a href="#specialties">Ceramic Hip Replacement</a></li>
+            <li><a href="#specialties">Spine & Sciatica Relief</a></li>
+            <li><a href="#contact">OPD Timings</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Contact & OPD</h4>
+          <p style="color: #cbd5e1; font-size: 0.9rem; margin-bottom: 12px;">
+            <i class="fa-solid fa-location-dot" style="color: #f59e0b;"></i> Shop 3-6, Om Nilkanth CHS, Sector 42-A, Seawoods (W), Navi Mumbai 400706
+          </p>
+          <p style="color: #cbd5e1; font-size: 0.9rem; margin-bottom: 12px;">
+            <i class="fa-solid fa-phone" style="color: #38bdf8;"></i> +91 7410702413
+          </p>
+          <p style="color: #cbd5e1; font-size: 0.9rem;">
+            <i class="fa-solid fa-envelope" style="color: #34d399;"></i> dr.dharmbedwal@gmail.com
+          </p>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 Dr. Dharm Bedwal - Orthos @ Krsnaa Diagnostics Ltd. All rights reserved.
+        </div>
+        <div>
+          Website: <a href="http://www.docorthos.com" target="_blank" style="color: #60a5fa;">www.docorthos.com</a> | Designed for Medical Excellence
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- APPOINTMENT BOOKING MODAL -->
+  <div id="appointmentModal" class="modal-overlay">
+    <div class="modal-card">
+      <button class="modal-close">&times;</button>
+      
+      <div id="modalBookingForm">
+        <div style="text-align: center; margin-bottom: 24px;">
+          <h3 style="font-size: 1.8rem; color: var(--text-main); font-weight: 800;">Book OPD Consultation</h3>
+          <p style="color: var(--accent-gold-dark); font-size: 0.95rem; margin-top: 4px; font-weight: 700;">Dr. Dharm Bedwal | Orthos @ Krsnaa Diagnostics</p>
+        </div>
+
+        <form>
+          <div class="form-group" style="margin-bottom: 16px;">
+            <label>Patient Full Name</label>
+            <input type="text" id="patientName" class="form-control" placeholder="e.g. Ramesh Kumar" required>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 16px;">
+            <label>Mobile Contact Number</label>
+            <input type="tel" id="patientPhone" class="form-control" placeholder="+91 98765 43210" required>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 16px;">
+            <label>Select Orthopaedic Specialty</label>
+            <select id="patientService" class="form-control">
+              <option value="Joint Replacement Evaluation">Joint Replacement Evaluation</option>
+              <option value="Spine & Sciatica Consultation">Spine & Sciatica Consultation</option>
+              <option value="Trauma & Fracture Care">Trauma & Fracture Care</option>
+              <option value="General OPD Consultation">General OPD Consultation</option>
+            </select>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 24px;">
+            <label>Preferred OPD Date</label>
+            <input type="date" id="patientDate" class="form-control" required>
+          </div>
+
+          <button type="submit" class="btn btn-gold" style="width: 100%; padding: 16px;">
+            <i class="fa-solid fa-check-circle"></i> Confirm OPD Appointment Request
+          </button>
+        </form>
+      </div>
+
+      <!-- Success Msg -->
+      <div id="modalSuccessMsg" style="display: none; text-align: center; padding: 20px 0;">
+        <div style="width: 70px; height: 70px; border-radius: 50%; background: #d1fae5; color: #059669; font-size: 2.2rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+          <i class="fa-solid fa-check"></i>
+        </div>
+        <h3 style="font-size: 1.8rem; color: var(--text-main); margin-bottom: 10px; font-weight: 800;">Appointment Request Sent!</h3>
+        <p style="color: var(--text-muted); font-size: 1rem; margin-bottom: 16px; font-weight: 600;">
+          Thank you, <strong class="patient-confirmed-name" style="color: var(--primary-blue);">Patient</strong>. Your OPD consultation request for <span class="patient-confirmed-details" style="color: var(--accent-gold-dark);">Details</span> has been recorded.
+        </p>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 24px;">
+          Our clinic desk will contact you shortly on phone/WhatsApp to confirm your exact time slot.
+        </p>
+        <a id="whatsappConfirmBtn" href="#" target="_blank" class="btn btn-gold" style="width: 100%;">
+          <i class="fa-brands fa-whatsapp"></i> Send Instant Confirmation on WhatsApp
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+</body>
+</html>
