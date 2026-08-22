@@ -1,6 +1,6 @@
 /* ==========================================================================
    ORTHOS @ KRSNAA DIAGNOSTICS - DR. DHARM BEDWAL LANDING PAGE
-   Refined Typography, Flawless Doctor Portrait & 100% Mobile Optimized
+   Refined Typography, Flawless Doctor Portrait & Floating Contact Buttons
    ========================================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
@@ -39,6 +39,7 @@
 
   --shadow-lux: 0 15px 35px -10px rgba(15, 23, 42, 0.08);
   --shadow-card: 0 6px 20px -6px rgba(15, 23, 42, 0.06);
+  --shadow-floating: 0 10px 30px rgba(0, 0, 0, 0.22);
   --radius-lg: 16px;
   --radius-md: 12px;
   --radius-sm: 8px;
@@ -134,93 +135,7 @@ h1, h2, h3, h4, .font-heading {
 }
 
 /* ==========================================================================
-   TOP EMERGENCY HEADER BAR
-   ========================================================================== */
-.top-bar {
-  background: #0f172a;
-  color: #ffffff;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
-  padding: 8px 0;
-  font-size: 0.825rem;
-  position: relative;
-  z-index: 1001;
-}
-
-.top-bar-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.top-bar-info {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.top-status-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: rgba(16, 185, 129, 0.2);
-  border: 1px solid rgba(16, 185, 129, 0.4);
-  color: #34d399;
-  padding: 3px 10px;
-  border-radius: 20px;
-  font-size: 0.75rem;
-  font-weight: 700;
-  white-space: nowrap;
-}
-
-.top-status-badge .pulse-dot {
-  width: 7px;
-  height: 7px;
-  background: #34d399;
-  border-radius: 50%;
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.7); }
-  70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(52, 211, 153, 0); }
-  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(52, 211, 153, 0); }
-}
-
-.top-hours {
-  color: #cbd5e1;
-  font-size: 0.8rem;
-}
-
-.top-bar-actions {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.top-contact-link {
-  color: #ffffff;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-weight: 700;
-  font-size: 0.825rem;
-  transition: color 0.25s;
-  white-space: nowrap;
-}
-
-.top-contact-link:hover {
-  color: #fef08a;
-}
-
-.top-wa-link {
-  color: #34d399;
-}
-
-/* ==========================================================================
-   NAVBAR - CLEAN, PROPORTIONED & ZERO MOBILE OVERFLOW
+   NAVBAR - CLEAN SOLID WHITE (TOP OF PAGE)
    ========================================================================== */
 .navbar {
   position: sticky;
@@ -236,20 +151,20 @@ h1, h2, h3, h4, .font-heading {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 70px;
+  height: 72px;
 }
 
 .brand-logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   text-decoration: none;
   min-width: 0;
   flex-shrink: 0;
 }
 
 .brand-logo img {
-  height: 44px;
+  height: 46px;
   width: auto;
   object-fit: contain;
 }
@@ -261,7 +176,7 @@ h1, h2, h3, h4, .font-heading {
 
 .brand-title {
   font-family: var(--font-heading);
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-weight: 900;
   color: #0f172a !important;
   line-height: 1.1;
@@ -269,17 +184,17 @@ h1, h2, h3, h4, .font-heading {
 }
 
 .brand-subtitle {
-  font-size: 0.65rem;
+  font-size: 0.68rem;
   color: #ea580c !important;
   font-weight: 800;
-  letter-spacing: 0.4px;
+  letter-spacing: 0.5px;
   white-space: nowrap;
 }
 
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 22px;
   list-style: none;
 }
 
@@ -287,7 +202,7 @@ h1, h2, h3, h4, .font-heading {
   color: #1e293b !important;
   text-decoration: none;
   font-weight: 700;
-  font-size: 0.875rem;
+  font-size: 0.9rem;
   transition: all 0.25s ease;
   position: relative;
   padding: 4px 0;
@@ -320,21 +235,7 @@ h1, h2, h3, h4, .font-heading {
 .navbar-actions {
   display: flex;
   align-items: center;
-  gap: 10px;
-}
-
-.mobile-call-btn {
-  display: none;
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  background: #eff6ff;
-  border: 1px solid var(--border-blue);
-  color: var(--primary-blue);
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  font-size: 0.95rem;
+  gap: 12px;
 }
 
 .desktop-book-btn {
@@ -434,6 +335,64 @@ h1, h2, h3, h4, .font-heading {
 }
 
 /* ==========================================================================
+   FLOATING ACTION BUTTONS (CALL & WHATSAPP)
+   ========================================================================== */
+.floating-contact-buttons {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1500;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.float-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 20px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 0.9rem;
+  color: #ffffff !important;
+  box-shadow: var(--shadow-floating);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.float-call {
+  background: linear-gradient(135deg, #1d4ed8 0%, #0f172a 100%);
+}
+
+.float-call:hover {
+  transform: scale(1.06) translateY(-3px);
+  box-shadow: 0 12px 30px rgba(29, 78, 216, 0.45);
+}
+
+.float-wa {
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  animation: waPulse 2.5s infinite;
+}
+
+.float-wa:hover {
+  transform: scale(1.06) translateY(-3px);
+  box-shadow: 0 12px 30px rgba(37, 211, 102, 0.5);
+}
+
+.float-btn i {
+  font-size: 1.25rem;
+}
+
+@keyframes waPulse {
+  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
+  70% { box-shadow: 0 0 0 12px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+/* ==========================================================================
    HERO SECTION
    ========================================================================== */
 .hero {
@@ -444,7 +403,7 @@ h1, h2, h3, h4, .font-heading {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-columns: 0.85fr 1.15fr;
   gap: 36px;
   align-items: center;
 }
@@ -566,7 +525,7 @@ h1, h2, h3, h4, .font-heading {
   box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.12);
 }
 
-/* Hero Doctor Card - Sized Proportions */
+/* Hero Doctor Card - Flawlessly Proportioned */
 .hero-visual-wrapper {
   position: relative;
   max-width: 350px;
@@ -1344,7 +1303,7 @@ h1, h2, h3, h4, .font-heading {
 }
 
 /* ==========================================================================
-   MOBILE & TABLET RESPONSIVE FIXES (< 768px & < 480px)
+   MOBILE & TABLET RESPONSIVE (< 768px & < 480px)
    ========================================================================== */
 @media (max-width: 1024px) {
   .hero-grid {
@@ -1370,57 +1329,31 @@ h1, h2, h3, h4, .font-heading {
 }
 
 @media (max-width: 768px) {
-  /* Top Bar Mobile Optimization - Super Compact Single Row */
-  .top-bar {
-    padding: 6px 0;
-    font-size: 0.75rem;
-  }
-  .top-bar-content {
-    justify-content: space-between;
-    align-items: center;
-  }
-  .top-hours {
-    display: none; /* Hide long timetable on mobile top bar */
-  }
-  .top-status-badge {
-    padding: 2px 8px;
-    font-size: 0.7rem;
-  }
-  .top-bar-actions {
-    gap: 10px;
-  }
-  .top-contact-link {
-    font-size: 0.75rem;
-  }
-
   /* Navbar Mobile Layout */
   .navbar-container {
-    height: 60px;
+    height: 62px;
   }
   .brand-logo img {
-    height: 36px;
+    height: 38px;
   }
   .brand-title {
-    font-size: 1.05rem;
+    font-size: 1.1rem;
   }
   .brand-subtitle {
-    font-size: 0.6rem;
+    font-size: 0.62rem;
   }
   .desktop-book-btn {
-    display: none; /* Hide oversized desktop button in mobile navbar */
-  }
-  .mobile-call-btn {
-    display: inline-flex; /* Show sleek phone icon */
+    display: none;
   }
   .nav-toggle {
-    display: block; /* Show hamburger toggle */
+    display: block;
   }
 
   /* Mobile Slide Down Drawer */
   .nav-menu {
     display: none;
     position: absolute;
-    top: 60px;
+    top: 62px;
     left: 0;
     right: 0;
     background: #ffffff;
@@ -1444,9 +1377,23 @@ h1, h2, h3, h4, .font-heading {
     display: block;
   }
 
+  /* Floating Action Buttons Mobile Position */
+  .floating-contact-buttons {
+    bottom: 18px;
+    right: 18px;
+    gap: 10px;
+  }
+  .float-btn {
+    padding: 10px 16px;
+    font-size: 0.825rem;
+  }
+  .float-btn i {
+    font-size: 1.15rem;
+  }
+
   /* Hero Section Mobile */
   .hero {
-    padding: 24px 0 45px;
+    padding: 20px 0 40px;
   }
   .hero-title {
     font-size: 1.75rem;
